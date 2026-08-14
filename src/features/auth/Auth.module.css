@@ -1,0 +1,24 @@
+.card {
+  padding: var(--ds-space-400);
+  border-radius: var(--ds-radius-large);
+  background-color: var(--ds-surface-raised);
+  box-shadow: var(--ds-shadow-raised);
+}
+
+/* The design system reset gives block elements a top margin; Stack owns spacing here. */
+.form {
+  margin: 0;
+}
+
+.link {
+  color: var(--ds-link);
+  font-weight: var(--ds-font-weight-medium);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:active {
+  color: var(--ds-link-pressed);
+}

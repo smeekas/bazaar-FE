@@ -1,0 +1,22 @@
+.shell {
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  gap: var(--ds-space-400);
+  align-items: center;
+  justify-content: center;
+  padding: var(--ds-space-400) var(--ds-space-200);
+  background-color: var(--ds-surface-sunken);
+  color: var(--ds-text);
+  font: var(--ds-font-body);
+}
+
+.wordmark {
+  font: var(--ds-font-heading-large);
+  color: var(--ds-text-brand);
+}
+
+.content {
+  width: 100%;
+  max-width: 400px;
+}
