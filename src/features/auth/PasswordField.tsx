@@ -5,14 +5,20 @@ import EyeOpenStrikethroughIcon from '@atlaskit/icon/core/eye-open-strikethrough
 import React, { useState } from 'react';
 import { UseFormRegisterReturn } from 'react-hook-form';
 
-type PasswordFieldProps = {
+type PasswordFieldProps<TName extends string> = {
   error?: string;
-} & UseFormRegisterReturn<'password'>;
-function PasswordField({ error, ...rest }: PasswordFieldProps) {
+  /** Defaults to "Password"; override for fields like a confirmation. */
+  label?: string;
+} & UseFormRegisterReturn<TName>;
+function PasswordField<TName extends string>({
+  error,
+  label = 'Password',
+  ...rest
+}: PasswordFieldProps<TName>) {
   const [passwordVisible, setPasswordVisible] = useState(false);
   return (
     <FormTextField
-      label='Password'
+      label={label}
       type={passwordVisible ? 'text' : 'password'}
       elemAfterInput={
         <Button

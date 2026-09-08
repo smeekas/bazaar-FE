@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 export default function LoginPage() {
   return (
     <AuthCard
-      title="Log in to Bazaar"
-      description="Pick up where you left off."
+      title='Log in to Bazaar'
+      description='Pick up where you left off.'
       footer={
         <>
-          New to Bazaar? <AuthLink href="/signup">Create an account</AuthLink>
+          New to Bazaar? <AuthLink href='/signup'>Create an account</AuthLink>
         </>
       }
     >

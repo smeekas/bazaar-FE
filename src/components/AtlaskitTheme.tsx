@@ -1,3 +1,6 @@
+// Must stay above the Atlaskit imports — see the module for why.
+import '@/config/atlaskitFeatureFlags';
+
 import { getThemeHtmlAttrs } from '@atlaskit/tokens/get-theme-html-attrs';
 import { getThemeStyles } from '@atlaskit/tokens/get-theme-styles';
 
@@ -23,11 +26,15 @@ export const themeHtmlAttrs = getThemeHtmlAttrs(THEME);
  */
 export async function AtlaskitThemeStyles() {
   const themes = await getThemeStyles(THEME);
-
   return (
     <>
       {themes.map(({ id, attrs, css }) => (
-        <style key={id} {...attrs} href={`atlaskit-theme-${id}`} precedence="high">
+        <style
+          key={id}
+          {...attrs}
+          href={`atlaskit-theme-${id}`}
+          precedence='high'
+        >
           {css}
         </style>
       ))}
